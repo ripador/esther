@@ -4,10 +4,10 @@ namespace AppBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Form\Extension\Core\Type\NumberType;
+use Symfony\Component\Form\Extension\Core\Type\MoneyType;
+use Symfony\Component\Form\Extension\Core\Type\PercentType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class DeutorType extends AbstractType {
 
@@ -22,7 +22,8 @@ class DeutorType extends AbstractType {
       ->add('city', TextType::class, ['label' => 'Población'])
       ->add('email', EmailType::class, ['label' => 'Email'])
       ->add('date', DateType::class, ['label' => 'Fecha', 'widget' => 'single_text'])
-      ->add('ammount', NumberType::class, ['label' => 'Importe'])
+      ->add('percentage', PercentType::class, ['label' => 'Porcentaje'])
+      ->add('ammount', MoneyType::class, ['label' => 'Importe', 'currency' => 'EUR', 'grouping' => false])
     ;
   }
 }

@@ -13,6 +13,9 @@
       <td><strong>{{ data.name }}</strong></td>
     </tr>
     <tr>
+      <td colspan="2">{{ data.comments }}</td>
+    </tr>
+    <tr>
       <td style="font-weight: bold">CIF/NIF</td>
       <td>{{ data.cif }}</td>
     </tr>
@@ -64,7 +67,11 @@
         </tr>
         <tr>
           <td style="font-weight: bold">Importe</td>
-          <td>{{ deutor.ammount }}€</td>
+          <td>{{ deutor.ammount|number_format(2, ',', '.') }}€</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold">Porcentaje</td>
+          <td>{{ deutor.percentage * 100 }}%</td>
         </tr>
         <tr>
           <td style="font-weight: bold">Fecha</td>

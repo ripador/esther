@@ -4,9 +4,9 @@ namespace AppBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class ClientType extends AbstractType {
 	
@@ -20,6 +20,7 @@ class ClientType extends AbstractType {
       ->add('postalCode', TextType::class, ['label' => 'Código postal'])
       ->add('city', TextType::class, ['label' => 'Población'])
       ->add('email', EmailType::class, ['label' => 'Email'])
+      ->add('comments', TextareaType::class, ['label' => 'Comentarios'])
       ->add('deutors', CollectionType::class, [
         'entry_type' => DeutorType::class,
         'entry_options' => ['label' => false],

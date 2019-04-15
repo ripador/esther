@@ -30,9 +30,12 @@
         </div>
 
         <div class="row">
+          <div class="col">{{ form_row(form.comments) }}</div>
+        </div>
+
+        <div class="row">
           <div class="col">
             <ul class="deutors" data-prototype="{{ form_widget(form.deutors.vars.prototype)|e('html_attr') }}">
-
             </ul>
           </div>
         </div>
