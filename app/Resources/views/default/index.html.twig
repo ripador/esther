@@ -36,6 +36,9 @@
         <div class="row">
           <div class="col">
             <ul class="deutors" data-prototype="{{ form_widget(form.deutors.vars.prototype)|e('html_attr') }}">
+              {% for deutor in form.deutors %}
+                <li>{{ form_widget(deutor) }}</li>
+              {% endfor %}
             </ul>
           </div>
         </div>

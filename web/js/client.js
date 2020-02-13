@@ -41,6 +41,6 @@ function addDeutorForm(collectionHolder, newLinkLi) {
   collectionHolder.data('index', index + 1);
 
   // Display the form in the page in an li, before the "Add a tag" link li
-  var $newFormLi = $('<li></li>').append(newForm);
-  newLinkLi.before($newFormLi);
+  var newFormLi = $('<li></li>').append(newForm);
+  newLinkLi.before(newFormLi);
 }
