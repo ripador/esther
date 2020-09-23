@@ -77,6 +77,14 @@
           <td style="font-weight: bold">Fecha</td>
           <td>{{ deutor.date.format('d-m-Y') }}</td>
         </tr>
+        <tr>
+          <td style="font-weight: bold">Fecha de inicio</td>
+          <td>{{ deutor.iniDate.format('d-m-Y') }}</td>
+        </tr>
+        <tr>
+          <td style="font-weight: bold">Concepto</td>
+          <td>{{ deutor.concept }}</td>
+        </tr>
 
         {% set i = i +1 %}
       {% endfor %}

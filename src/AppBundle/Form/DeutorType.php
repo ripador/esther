@@ -24,6 +24,8 @@ class DeutorType extends AbstractType {
       ->add('date', DateType::class, ['label' => 'Fecha', 'widget' => 'single_text'])
       ->add('percentage', PercentType::class, ['label' => 'Porcentaje'])
       ->add('ammount', MoneyType::class, ['label' => 'Importe', 'currency' => 'EUR', 'grouping' => false])
+      ->add('iniDate', DateType::class, ['label' => 'Fecha de inicio', 'widget' => 'single_text', 'required' => false])
+      ->add('concept', TextType::class, ['label' => 'Concepto', 'required' => false])
     ;
   }
 }
